@@ -1,0 +1,46 @@
+{
+  "id": "module3",
+  "title": "Module 3: Control Flow",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Simple If Statement",
+      "difficulty": "easy",
+      "description": "Check if age >= 18, print 'You are an adult' if true",
+      "code_template": "age = 20\n# Your code here\n",
+      "expected_answer": "if age >= 18:\n    print('You are an adult')",
+      "solution": "if age >= 18:\n    print('You are an adult')",
+      "explanation": "Use if statement with proper indentation for the code block."
+    },
+    {
+      "id": 2,
+      "title": "If-Else Statement",
+      "difficulty": "easy",
+      "description": "Check if score > 50, print 'Pass' or 'Fail'",
+      "code_template": "score = 60\n# Your code here\n",
+      "expected_answer": "if score > 50:\n    print('Pass')\nelse:\n    print('Fail')",
+      "solution": "if score > 50:\n    print('Pass')\nelse:\n    print('Fail')",
+      "explanation": "else runs when the if condition is False."
+    },
+    {
+      "id": 3,
+      "title": "For Loop",
+      "difficulty": "medium",
+      "description": "Print numbers 1 to 5 using a loop",
+      "code_template": "# Loop from 1 to 5\n",
+      "expected_answer": "for i in range(1, 6):\n    print(i)",
+      "solution": "for i in range(1, 6):\n    print(i)",
+      "explanation": "range(1, 6) produces 1, 2, 3, 4, 5 (excludes the end value)."
+    },
+    {
+      "id": 4,
+      "title": "While Loop",
+      "difficulty": "medium",
+      "description": "Print numbers starting from 5 counting down to 1",
+      "code_template": "count = 5\n# Your code here\n",
+      "expected_answer": "while count > 0:\n    print(count)\n    count = count - 1",
+      "solution": "while count > 0:\n    print(count)\n    count = count - 1",
+      "explanation": "Use -= to shorten: count -= 1"
+    }
+  ]
+}

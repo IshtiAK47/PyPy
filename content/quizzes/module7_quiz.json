@@ -1,0 +1,126 @@
+{
+  "id": "module7",
+  "title": "Object-Oriented Programming",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does the __init__ method do in a class?",
+      "options": [
+        "Initializes/constructs new objects when called",
+        "Initializes the module",
+        "Initializes the Python interpreter",
+        "Initializes variables in all classes"
+      ],
+      "correct_answer": 0,
+      "explanation": "__init__ is the constructor called automatically when you create a new instance of a class to set up initial attributes."
+    },
+    {
+      "id": 2,
+      "question": "What is inheritance in OOP?",
+      "options": [
+        "A child class receiving attributes and methods from a parent class",
+        "Creating multiple instances of the same class",
+        "Storing data in a class variable",
+        "Calling a method from another object"
+      ],
+      "correct_answer": 0,
+      "explanation": "Inheritance allows a class to inherit properties and methods from another class, enabling code reuse."
+    },
+    {
+      "id": 3,
+      "question": "What is self in a class method?",
+      "options": [
+        "A reference to the current instance/object",
+        "The parent class",
+        "A global variable",
+        "A built-in Python function"
+      ],
+      "correct_answer": 0,
+      "explanation": "self represents the instance itself, allowing methods to access and modify the object's attributes."
+    },
+    {
+      "id": 4,
+      "question": "How do you call a parent class method from a child class?",
+      "options": [
+        "super().method_name()",
+        "parent().method_name()",
+        "super.method_name()",
+        "self.parent.method_name()"
+      ],
+      "correct_answer": 0,
+      "explanation": "super() returns a proxy object that allows you to call methods from the parent class."
+    },
+    {
+      "id": 5,
+      "question": "What is polymorphism in OOP?",
+      "options": [
+        "Different classes responding to the same method name differently",
+        "Using multiple inheritance",
+        "Creating many instances of one class",
+        "Adding more methods to a class"
+      ],
+      "correct_answer": 0,
+      "explanation": "Polymorphism allows objects of different classes to respond differently to the same method call."
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of __str__ method?",
+      "options": [
+        "Defines how the object appears when converted to string",
+        "Defines the class name",
+        "Calculates the object's memory size",
+        "Converts string inputs to the object"
+      ],
+      "correct_answer": 0,
+      "explanation": "__str__ returns a readable string representation of the object, used by str() and print()."
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between class variables and instance variables?",
+      "options": [
+        "Class variables are shared by all instances, instance variables are unique per object",
+        "Class variables can't be modified, instance variables can",
+        "They are the same thing with different names",
+        "Instance variables are always private"
+      ],
+      "correct_answer": 0,
+      "explanation": "Class variables are shared across all instances of a class, while instance variables are specific to each object."
+    },
+    {
+      "id": 8,
+      "question": "What does method overriding mean?",
+      "options": [
+        "A child class defines its own version of a parent method",
+        "Creating multiple methods with the same name",
+        "Preventing access to a method",
+        "Calling a method multiple times"
+      ],
+      "correct_answer": 0,
+      "explanation": "Method overriding allows a subclass to provide its own implementation of a method from the parent class."
+    },
+    {
+      "id": 9,
+      "question": "What is encapsulation?",
+      "options": [
+        "Hiding internal object details and controlling access through methods",
+        "Wrapping code in functions",
+        "Creating classes from other classes",
+        "Storing data in lists"
+      ],
+      "correct_answer": 0,
+      "explanation": "Encapsulation protects object data by making attributes private and providing controlled access through methods."
+    },
+    {
+      "id": 10,
+      "question": "How do you create a private attribute in Python?",
+      "options": [
+        "Use double underscore prefix: __attribute",
+        "Use single underscore prefix: _attribute",
+        "Use @private decorator",
+        "Use private keyword"
+      ],
+      "correct_answer": 0,
+      "explanation": "Double underscore prefix (__) makes an attribute private through name mangling in Python."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "module1",
+  "title": "Module 1: Python Introduction",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Your First Program",
+      "difficulty": "easy",
+      "description": "Write a program that prints 'Hello, Python!'",
+      "code_template": "# Write your first program here\n",
+      "expected_answer": "print('Hello, Python!')",
+      "solution": "print('Hello, Python!')",
+      "explanation": "Use the print() function to display text. The text must be in quotes."
+    },
+    {
+      "id": 2,
+      "title": "Print Multiple Lines",
+      "difficulty": "easy",
+      "description": "Print three lines: 'Learning', 'Python', 'is fun'",
+      "code_template": "# Print three lines\n",
+      "expected_answer": "print('Learning')\nprint('Python')\nprint('is fun')",
+      "solution": "print('Learning')\nprint('Python')\nprint('is fun')",
+      "explanation": "Each print() call creates a new line of output."
+    },
+    {
+      "id": 3,
+      "title": "Python Version Check",
+      "difficulty": "medium",
+      "description": "Write a program that shows the Python version",
+      "code_template": "import sys\n# Your code here\n",
+      "expected_answer": "import sys\nprint(sys.version)",
+      "solution": "import sys\nprint(sys.version)",
+      "explanation": "Use the sys module to access version information."
+    },
+    {
+      "id": 4,
+      "title": "Interactive Input",
+      "difficulty": "medium",
+      "description": "Ask for user's name and greet them",
+      "code_template": "# Ask for name and greet\n",
+      "expected_answer": "name = input('What is your name? ')\nprint('Hello, ' + name)",
+      "solution": "name = input('What is your name? ')\nprint('Hello, ' + name)",
+      "explanation": "Use input() to get user input and store it in a variable."
+    }
+  ]
+}

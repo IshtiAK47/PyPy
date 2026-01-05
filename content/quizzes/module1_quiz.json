@@ -1,0 +1,127 @@
+{
+  "module_id": 1,
+  "title": "Module 1 Quiz - Introduction to Python",
+  "description": "Test your knowledge of Python basics and setup",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Python primarily used for?",
+      "options": [
+        "A programming language for beginners and professionals",
+        "A type of snake",
+        "A video format",
+        "A web browser"
+      ],
+      "correct_answer": 0,
+      "explanation": "Python is a high-level programming language that's great for both beginners and experienced developers. It's popular in data science, web development, AI, and automation."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is the correct way to print text in Python?",
+      "options": [
+        "Print(\"Hello\")",
+        "print(\"Hello\")",
+        "printf(\"Hello\")",
+        "output(\"Hello\")"
+      ],
+      "correct_answer": 1,
+      "explanation": "Python uses the lowercase function `print()` to display output. The function name is case-sensitive, so `Print()` would cause an error."
+    },
+    {
+      "id": 3,
+      "question": "What does a variable do?",
+      "options": [
+        "Stores data that changes over time",
+        "Is used for mathematical calculations only",
+        "Controls program flow",
+        "Creates loops"
+      ],
+      "correct_answer": 0,
+      "explanation": "A variable is a container for storing data. You can store any type of information in a variable, and you can change its value later in your program."
+    },
+    {
+      "id": 4,
+      "question": "What file extension should you use for Python files?",
+      "options": [
+        ".txt",
+        ".py",
+        ".python",
+        ".pyx"
+      ],
+      "correct_answer": 1,
+      "explanation": "Python files use the `.py` extension. While you could technically use other extensions, `.py` is the standard and tells the system it's a Python file."
+    },
+    {
+      "id": 5,
+      "question": "In Python, text is stored as which data type?",
+      "options": [
+        "Integer",
+        "Float",
+        "String",
+        "Boolean"
+      ],
+      "correct_answer": 2,
+      "explanation": "Text in Python is stored as a string data type. Strings must be enclosed in quotes (either single or double quotes)."
+    },
+    {
+      "id": 6,
+      "question": "What does the following code output?",
+      "options": [
+        "Hello World",
+        "error",
+        "Hello",
+        "World"
+      ],
+      "correct_answer": 0,
+      "explanation": "The code `print(\"Hello World\")` outputs exactly: Hello World"
+    },
+    {
+      "id": 7,
+      "question": "How do you add a comment in Python?",
+      "options": [
+        "// This is a comment",
+        "/* This is a comment */",
+        "# This is a comment",
+        "-- This is a comment"
+      ],
+      "correct_answer": 2,
+      "explanation": "In Python, comments start with a hash symbol (#). Everything after the # on that line is ignored by Python and serves only to explain the code."
+    },
+    {
+      "id": 8,
+      "question": "What is the correct way to create a variable with a value?",
+      "options": [
+        "name == \"Alice\"",
+        "name = \"Alice\"",
+        "\"Alice\" = name",
+        "name: \"Alice\""
+      ],
+      "correct_answer": 1,
+      "explanation": "To assign a value to a variable, use the single equals sign (=). Double equals (==) is used for comparison, not assignment."
+    },
+    {
+      "id": 9,
+      "question": "Which command should you use to check if Python is installed correctly?",
+      "options": [
+        "python installed",
+        "python version",
+        "python --version",
+        "python check"
+      ],
+      "correct_answer": 2,
+      "explanation": "Use `python --version` (or `python3 --version` on macOS/Linux) to check if Python is installed and which version you have."
+    },
+    {
+      "id": 10,
+      "question": "What is the main reason Python is popular for beginners?",
+      "options": [
+        "It's the fastest language",
+        "It has simple, readable syntax that's easy to learn",
+        "It's the only free programming language",
+        "It doesn't require a computer"
+      ],
+      "correct_answer": 1,
+      "explanation": "Python is popular with beginners because its syntax is clean and readable - it reads almost like English. This makes it easy to understand and learn for newcomers to programming."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% block title %}{{ module.title }} - PyPy{% endblock %}
+
+{% block content %}
+<section class="module-detail-section">
+    <div class="module-nav">
+        <a href="/modules" class="nav-back">← Back to Modules</a>
+    </div>
+    
+    <div class="module-detail-header">
+        <div class="breadcrumb">
+            <a href="/">Home</a> / <a href="/modules">Modules</a> / <strong>{{ module.title }}</strong>
+        </div>
+        <h1>{{ module.title }}</h1>
+        <p class="module-subtitle">Learn Python systematically</p>
+    </div>
+    
+    <div class="module-detail-container">
+        <aside class="module-sidebar">
+            <div class="module-toc">
+                <h3>All Modules</h3>
+                <ul class="modules-list">
+                    {% for m in all_modules %}
+                    <li>
+                        <a href="/module/{{ m.id }}" class="{% if m.id == module.id %}active{% endif %}">
+                            Module {{ m.id }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="module-info">
+                <h4>Module Info</h4>
+                <div class="info-item">
+                    <span class="label">Difficulty:</span>
+                    <span class="value difficulty-{{ 'easy' if module.id <= 3 else 'medium' if module.id <= 6 else 'hard' }}">
+                        {% if module.id <= 3 %}Beginner{% elif module.id <= 6 %}Intermediate{% else %}Advanced{% endif %}
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Duration:</span>
+                    <span class="value">{{ 1 if module.id in [1,4] else 2 if module.id in [2,3,5,6,9] else 3 if module.id == 8 else 3 }}-{{ 2 if module.id in [1,4] else 3 if module.id in [2,3,5,6,9] else 4 if module.id == 8 else 3 }} weeks</span>
+                </div>
+            </div>
+            
+            <div class="module-actions-sidebar">
+                <a href="/quiz/{{ module.id }}" class="btn btn-primary btn-block">Take Quiz</a>
+                <a href="/practice?module={{ module.id }}" class="btn btn-secondary btn-block">Practice</a>
+            </div>
+        </aside>
+        
+        <main class="module-content">
+            {% if content %}
+                <div class="lesson-content">
+                    {{ content | safe }}
+                </div>
+            {% else %}
+                <div class="placeholder-content">
+                    <p>Loading module content...</p>
+                </div>
+            {% endif %}
+            
+            <div class="module-footer">
+                <div class="navigation-buttons">
+                    {% if module.id > 1 %}
+                    <a href="/module/{{ module.id - 1 }}" class="btn btn-secondary">← Previous Module</a>
+                    {% endif %}
+                    
+                    {% if module.id < 10 %}
+                    <a href="/module/{{ module.id + 1 }}" class="btn btn-primary">Next Module →</a>
+                    {% else %}
+                    <a href="/projects" class="btn btn-primary">View Projects →</a>
+                    {% endif %}
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+
+<style>
+    .module-detail-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--spacing-lg);
+    }
+    
+    .module-nav {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .nav-back {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    
+    .module-detail-header {
+        margin-bottom: var(--spacing-xl);
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .breadcrumb {
+        margin-bottom: var(--spacing-md);
+        color: #666;
+    }
+    
+    .breadcrumb a {
+        color: var(--primary-color);
+    }
+    
+    .module-detail-header h1 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .module-subtitle {
+        color: #666;
+        margin: 0;
+    }
+    
+    .module-detail-container {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .module-sidebar {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+    }
+    
+    .module-toc,
+    .module-info {
+        background: #f9f9f9;
+        padding: var(--spacing-md);
+        border-radius: 8px;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .module-toc h3,
+    .module-info h4 {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+        color: var(--primary-color);
+    }
+    
+    .modules-list {
+        list-style: none;
+        margin: 0;
+    }
+    
+    .modules-list li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .modules-list a {
+        display: block;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: var(--transition);
+    }
+    
+    .modules-list a:hover,
+    .modules-list a.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .info-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+    
+    .info-item .label {
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .module-actions-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-block {
+        width: 100%;
+    }
+    
+    .lesson-content {
+        background: white;
+        padding: var(--spacing-lg);
+        border-radius: 8px;
+    }
+    
+    .lesson-content h2,
+    .lesson-content h3,
+    .lesson-content h4 {
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .lesson-content code {
+        background-color: #f5f5f5;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+    }
+    
+    .lesson-content pre {
+        margin: var(--spacing-md) 0;
+    }
+    
+    .lesson-content ul,
+    .lesson-content ol {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .module-footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-lg);
+        border-top: 2px solid #e0e0e0;
+    }
+    
+    .navigation-buttons {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: space-between;
+    }
+    
+    .navigation-buttons .btn {
+        flex: 1;
+    }
+    
+    .placeholder-content {
+        background: #f9f9f9;
+        padding: var(--spacing-xl);
+        border-radius: 8px;
+        text-align: center;
+        color: #999;
+    }
+    
+    @media (max-width: 768px) {
+        .module-detail-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .module-sidebar {
+            position: static;
+        }
+        
+        .navigation-buttons {
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %}

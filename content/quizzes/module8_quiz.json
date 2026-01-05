@@ -1,0 +1,126 @@
+{
+  "id": "module8",
+  "title": "Advanced Topics - Professional Techniques",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of try-except blocks?",
+      "options": [
+        "Handle errors gracefully without crashing the program",
+        "Repeat code until no errors occur",
+        "Test if code is correct",
+        "Optimize code performance"
+      ],
+      "correct_answer": 0,
+      "explanation": "try-except blocks allow you to catch and handle errors, preventing the program from crashing."
+    },
+    {
+      "id": 2,
+      "question": "When does the finally block execute?",
+      "options": [
+        "Whether an exception occurs or not",
+        "Only when an exception occurs",
+        "Only when no exception occurs",
+        "After all except blocks are checked"
+      ],
+      "correct_answer": 0,
+      "explanation": "finally block always executes, making it ideal for cleanup operations like closing files."
+    },
+    {
+      "id": 3,
+      "question": "What is a decorator in Python?",
+      "options": [
+        "A function that modifies another function without changing the original",
+        "A class that stores data",
+        "A way to organize code into files",
+        "A syntax for calling methods"
+      ],
+      "correct_answer": 0,
+      "explanation": "Decorators wrap functions to enhance or modify their behavior using the @ symbol."
+    },
+    {
+      "id": 4,
+      "question": "What does the yield keyword do?",
+      "options": [
+        "Turns a function into a generator that returns values one at a time",
+        "Returns a value permanently",
+        "Yields control to a parent function",
+        "Creates a new variable"
+      ],
+      "correct_answer": 0,
+      "explanation": "yield creates a generator that returns values lazily, one per call, saving memory."
+    },
+    {
+      "id": 5,
+      "question": "What is the benefit of generators?",
+      "options": [
+        "Memory efficient for large datasets",
+        "Faster than regular functions",
+        "More readable code",
+        "Easier to debug"
+      ],
+      "correct_answer": 0,
+      "explanation": "Generators produce values on-demand rather than storing everything in memory."
+    },
+    {
+      "id": 6,
+      "question": "What does a context manager do?",
+      "options": [
+        "Manages resource allocation and cleanup (like with open())",
+        "Manages class inheritance",
+        "Manages memory allocation",
+        "Manages exception types"
+      ],
+      "correct_answer": 0,
+      "explanation": "Context managers ensure proper setup and cleanup of resources, like files, using __enter__ and __exit__."
+    },
+    {
+      "id": 7,
+      "question": "What is type hinting?",
+      "options": [
+        "Annotating variables/parameters with expected types for clarity",
+        "Converting types automatically",
+        "Checking type errors at runtime",
+        "Changing variable types dynamically"
+      ],
+      "correct_answer": 0,
+      "explanation": "Type hints document expected types and help IDEs provide better suggestions and error detection."
+    },
+    {
+      "id": 8,
+      "question": "What exception is raised when dividing by zero?",
+      "options": [
+        "ZeroDivisionError",
+        "ValueError",
+        "TypeError",
+        "MathError"
+      ],
+      "correct_answer": 0,
+      "explanation": "ZeroDivisionError is raised when attempting mathematical division by zero."
+    },
+    {
+      "id": 9,
+      "question": "How do you raise a custom exception?",
+      "options": [
+        "raise CustomException('message')",
+        "throw CustomException('message')",
+        "raise 'CustomException'",
+        "error CustomException('message')"
+      ],
+      "correct_answer": 0,
+      "explanation": "Use the raise keyword followed by the exception class to raise custom exceptions."
+    },
+    {
+      "id": 10,
+      "question": "What does pdb.set_trace() do?",
+      "options": [
+        "Pauses execution for debugging, allowing step-through inspection",
+        "Traces all function calls in a file",
+        "Sets up a trace file for logging",
+        "Traces memory usage"
+      ],
+      "correct_answer": 0,
+      "explanation": "pdb.set_trace() starts the Python debugger at that point, allowing interactive inspection."
+    }
+  ]
+}

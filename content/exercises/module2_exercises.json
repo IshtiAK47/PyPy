@@ -1,0 +1,46 @@
+{
+  "id": "module2",
+  "title": "Module 2: Python Fundamentals",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Create Variables",
+      "difficulty": "easy",
+      "description": "Create three variables: age=25, name='Alice', height=5.6",
+      "code_template": "# Create variables\n",
+      "expected_answer": "age = 25\nname = 'Alice'\nheight = 5.6",
+      "solution": "age = 25\nname = 'Alice'\nheight = 5.6",
+      "explanation": "Variables store different data types: int, str, and float."
+    },
+    {
+      "id": 2,
+      "title": "Arithmetic Operations",
+      "difficulty": "easy",
+      "description": "Calculate: (10 + 5) * 2",
+      "code_template": "result = \n",
+      "expected_answer": "result = (10 + 5) * 2",
+      "solution": "result = (10 + 5) * 2\nprint(result)",
+      "explanation": "Use parentheses to control the order of operations."
+    },
+    {
+      "id": 3,
+      "title": "Data Type Conversion",
+      "difficulty": "medium",
+      "description": "Convert '42' (string) to integer and '3.14' to float",
+      "code_template": "string_num = '42'\nstring_float = '3.14'\n# Convert below\n",
+      "expected_answer": "int_num = int(string_num)\nfloat_num = float(string_float)",
+      "solution": "int_num = int('42')\nfloat_num = float('3.14')",
+      "explanation": "Use int() and float() functions to convert string types."
+    },
+    {
+      "id": 4,
+      "title": "Type Checking",
+      "difficulty": "medium",
+      "description": "Check the type of variables: 5, 'hello', 3.14, True",
+      "code_template": "# Use type() function\n",
+      "expected_answer": "type(5)\ntype('hello')\ntype(3.14)\ntype(True)",
+      "solution": "print(type(5))\nprint(type('hello'))\nprint(type(3.14))\nprint(type(True))",
+      "explanation": "Use type() to check what type a value is."
+    }
+  ]
+}

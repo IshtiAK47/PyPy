@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the correct way to create a variable in Python?",
+    "options": [
+      "variable == 5",
+      "variable = 5",
+      "5 = variable",
+      "set variable 5"
+    ],
+    "correct_answer": 1,
+    "explanation": "Variables are created using the assignment operator `=`. The `==` operator is for comparison, not assignment."
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is NOT a valid variable name?",
+    "options": [
+      "myVariable",
+      "my_variable",
+      "2ndVariable",
+      "my_var_2024"
+    ],
+    "correct_answer": 2,
+    "explanation": "Variable names cannot start with a number. Valid names must start with a letter or underscore."
+  },
+  {
+    "id": 3,
+    "question": "What is the data type of the value True?",
+    "options": [
+      "integer",
+      "string",
+      "boolean",
+      "float"
+    ],
+    "correct_answer": 2,
+    "explanation": "True and False are boolean values, which represent true/false states in Python."
+  },
+  {
+    "id": 4,
+    "question": "What is the result of: 10 // 3?",
+    "options": [
+      "3.33",
+      "3",
+      "3.0",
+      "Error"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `//` operator performs floor division, which returns an integer result by rounding down. 10 // 3 = 3."
+  },
+  {
+    "id": 5,
+    "question": "What is the result of: 10 % 3?",
+    "options": [
+      "3",
+      "1",
+      "3.33",
+      "0"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `%` operator returns the remainder after division. 10 % 3 = 1 (since 10 = 3*3 + 1)."
+  },
+  {
+    "id": 6,
+    "question": "How do you convert the string '42' to an integer?",
+    "options": [
+      "integer('42')",
+      "int('42')",
+      "convert('42')",
+      "str_to_int('42')"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `int()` function converts strings to integers. int('42') returns the integer 42."
+  },
+  {
+    "id": 7,
+    "question": "What is returned by: type(3.14)?",
+    "options": [
+      "<class 'int'>",
+      "<class 'float'>",
+      "<class 'str'>",
+      "<class 'number'>"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `type()` function returns the data type. 3.14 is a float (decimal number)."
+  },
+  {
+    "id": 8,
+    "question": "Which operator means 'AND' in Python?",
+    "options": [
+      "&",
+      "&&",
+      "and",
+      "|"
+    ],
+    "correct_answer": 2,
+    "explanation": "Python uses the `and` keyword for logical AND. Both conditions must be True for the result to be True."
+  },
+  {
+    "id": 9,
+    "question": "What is the index of the first element in a list?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "-0"
+    ],
+    "correct_answer": 1,
+    "explanation": "Python uses 0-based indexing. The first element is at index 0, not 1."
+  },
+  {
+    "id": 10,
+    "question": "How do you get user input in Python?",
+    "options": [
+      "get_input()",
+      "read()",
+      "input()",
+      "scan()"
+    ],
+    "correct_answer": 2,
+    "explanation": "The `input()` function prompts the user for text input and returns it as a string."
+  }
+]

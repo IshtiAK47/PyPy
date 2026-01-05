@@ -1,0 +1,126 @@
+{
+  "id": "module6",
+  "title": "Data Structures - Collections & Organization",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does the list.append() method do?",
+      "options": [
+        "Adds an item to the end of the list",
+        "Removes the first item from the list",
+        "Sorts the list in alphabetical order",
+        "Returns the number of items in the list"
+      ],
+      "correct_answer": 0,
+      "explanation": "append() adds a single item to the end of the list. remove() deletes items, sort() reorders, and len() counts items."
+    },
+    {
+      "id": 2,
+      "question": "What is the difference between lists and tuples?",
+      "options": [
+        "Lists are mutable, tuples are immutable",
+        "Tuples are mutable, lists are immutable",
+        "They are exactly the same",
+        "Lists use {}, tuples use []"
+      ],
+      "correct_answer": 0,
+      "explanation": "Lists can be modified after creation (mutable), while tuples cannot be changed once created (immutable)."
+    },
+    {
+      "id": 3,
+      "question": "How do you create an empty set in Python?",
+      "options": [
+        "set()",
+        "{}",
+        "[]",
+        "()"
+      ],
+      "correct_answer": 0,
+      "explanation": "{} creates an empty dict, not a set. Use set() to create an empty set."
+    },
+    {
+      "id": 4,
+      "question": "What does a dictionary use to store values?",
+      "options": [
+        "Keys and values (key-value pairs)",
+        "Only numeric indices",
+        "Only string indices",
+        "Automatic memory addresses"
+      ],
+      "correct_answer": 0,
+      "explanation": "Dictionaries store data as key-value pairs, where keys can be various types to access corresponding values."
+    },
+    {
+      "id": 5,
+      "question": "What does [x**2 for x in range(5)] create?",
+      "options": [
+        "[0, 1, 4, 9, 16]",
+        "[0, 1, 2, 3, 4]",
+        "[1, 4, 9, 16, 25]",
+        "[2, 4, 6, 8, 10]"
+      ],
+      "correct_answer": 0,
+      "explanation": "This list comprehension squares each number from 0 to 4: 0²=0, 1²=1, 2²=4, 3²=9, 4²=16."
+    },
+    {
+      "id": 6,
+      "question": "How do you access the first element of a list?",
+      "options": [
+        "list[0]",
+        "list[1]",
+        "list.first()",
+        "list.get(0)"
+      ],
+      "correct_answer": 0,
+      "explanation": "Python uses 0-based indexing, so the first element is at index 0."
+    },
+    {
+      "id": 7,
+      "question": "What operation removes duplicates from [1, 2, 2, 3, 3, 3]?",
+      "options": [
+        "set([1, 2, 2, 3, 3, 3]) → {1, 2, 3}",
+        "tuple([1, 2, 2, 3, 3, 3])",
+        "dict([1, 2, 2, 3, 3, 3])",
+        "[1, 2, 2, 3, 3, 3].unique()"
+      ],
+      "correct_answer": 0,
+      "explanation": "Sets automatically store only unique values, so converting to a set removes duplicates."
+    },
+    {
+      "id": 8,
+      "question": "How do you combine two dictionaries?",
+      "options": [
+        "dict1.update(dict2) or {**dict1, **dict2}",
+        "dict1 + dict2",
+        "dict1.append(dict2)",
+        "dict1.merge(dict2)"
+      ],
+      "correct_answer": 0,
+      "explanation": "Use update() method or dictionary unpacking with ** operator to combine dictionaries."
+    },
+    {
+      "id": 9,
+      "question": "What does sorted() return for a set?",
+      "options": [
+        "A list with sorted items",
+        "A sorted set object",
+        "A tuple with sorted items",
+        "The original set unchanged"
+      ],
+      "correct_answer": 0,
+      "explanation": "sorted() always returns a list, regardless of the input type, with items in sorted order."
+    },
+    {
+      "id": 10,
+      "question": "When should you use a tuple instead of a list?",
+      "options": [
+        "When you need immutable data or want to use it as a dictionary key",
+        "When you need to store more data",
+        "When you need faster access",
+        "When storing strings"
+      ],
+      "correct_answer": 0,
+      "explanation": "Tuples are useful when you need constant data or when using items as dictionary keys, since lists are mutable."
+    }
+  ]
+}

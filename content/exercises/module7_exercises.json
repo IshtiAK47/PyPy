@@ -1,0 +1,46 @@
+{
+  "id": "module7",
+  "title": "Module 7: Object-Oriented Programming",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Create a Class",
+      "difficulty": "easy",
+      "description": "Create Dog class with __init__(name)",
+      "code_template": "class Dog:\n    # Your code\n",
+      "expected_answer": "def __init__(self, name):\n    self.name = name",
+      "solution": "class Dog:\n    def __init__(self, name):\n        self.name = name\ndog = Dog('Buddy')",
+      "explanation": "__init__ initializes new objects with attributes."
+    },
+    {
+      "id": 2,
+      "title": "Class Method",
+      "difficulty": "easy",
+      "description": "Add bark() method that prints name + ' barks'",
+      "code_template": "class Dog:\n    def __init__(self, name):\n        self.name = name\n    def bark(self):\n        # Your code\n",
+      "expected_answer": "print(self.name + ' barks')",
+      "solution": "class Dog:\n    def __init__(self, name):\n        self.name = name\n    def bark(self):\n        print(self.name + ' barks')",
+      "explanation": "Methods use self to access object attributes."
+    },
+    {
+      "id": 3,
+      "title": "Class Inheritance",
+      "difficulty": "medium",
+      "description": "Create Animal parent, Dog child inheriting from Animal",
+      "code_template": "class Animal:\n    def speak(self):\n        print('Some sound')\nclass Dog(Animal):\n    # Your code\n",
+      "expected_answer": "def speak(self):\n    print('Woof')",
+      "solution": "class Dog(Animal):\n    def speak(self):\n        print('Woof')",
+      "explanation": "Child class inherits from parent: class Child(Parent)"
+    },
+    {
+      "id": 4,
+      "title": "Using super()",
+      "difficulty": "medium",
+      "description": "Call parent __init__ in child class",
+      "code_template": "class Parent:\n    def __init__(self, name):\n        self.name = name\nclass Child(Parent):\n    def __init__(self, name, age):\n        # Your code\n        self.age = age\n",
+      "expected_answer": "super().__init__(name)",
+      "solution": "super().__init__(name)",
+      "explanation": "super() calls parent class methods."
+    }
+  ]
+}

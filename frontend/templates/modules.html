@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}Modules - PyPy{% endblock %}
+
+{% block content %}
+<section class="modules-section">
+    <div class="section-header">
+        <h1>Python Modules</h1>
+        <p>Learn Python systematically through 10 comprehensive modules</p>
+    </div>
+    
+    <div class="modules-grid">
+        {% for module in all_modules %}
+        <div class="module-card">
+            <div class="module-header">
+                <div class="module-number-large">{{ module.id }}</div>
+                <h2>{{ module.title }}</h2>
+            </div>
+            
+            <div class="module-content">
+                <p class="module-description">
+                    {% if module.id == 1 %}
+                        Learn the basics of Python, set up your environment, and write your first program.
+                    {% elif module.id == 2 %}
+                        Master variables, data types, and operators - the fundamentals of programming.
+                    {% elif module.id == 3 %}
+                        Control program flow with if-else statements and loops.
+                    {% elif module.id == 4 %}
+                        Work with text: string methods, formatting, and manipulation.
+                    {% elif module.id == 5 %}
+                        Create reusable code with functions, lambda expressions, and modules.
+                    {% elif module.id == 6 %}
+                        Organize data with lists, dictionaries, sets, and tuples.
+                    {% elif module.id == 7 %}
+                        Build applications with classes, inheritance, and object-oriented design.
+                    {% elif module.id == 8 %}
+                        Advanced Python: decorators, generators, and exception handling.
+                    {% elif module.id == 9 %}
+                        Read and write files, work with the operating system.
+                    {% elif module.id == 10 %}
+                        Use external libraries, APIs, and build real applications.
+                    {% endif %}
+                </p>
+            </div>
+            
+            <div class="module-meta">
+                <span class="difficulty difficulty-{{ 'easy' if module.id <= 3 else 'medium' if module.id <= 6 else 'hard' }}">
+                    {% if module.id <= 3 %}Beginner{% elif module.id <= 6 %}Intermediate{% else %}Advanced{% endif %}
+                </span>
+                <span class="duration">{{ 1 if module.id in [1,4] else 2 if module.id in [2,3,5,6,9] else 3 if module.id == 8 else 3 }}-{{ 2 if module.id in [1,4] else 3 if module.id in [2,3,5,6,9] else 4 if module.id == 8 else 3 }} weeks</span>
+            </div>
+            
+            <div class="module-actions">
+                <a href="/module/{{ module.id }}" class="btn btn-primary">Start Learning</a>
+                <a href="/quiz/{{ module.id }}" class="btn btn-secondary">Take Quiz</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<style>
+    .modules-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-header h1 {
+        color: var(--primary-color);
+    }
+    
+    .modules-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .module-card {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: var(--spacing-lg);
+        transition: var(--transition);
+    }
+    
+    .module-card:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--box-shadow);
+        transform: translateY(-5px);
+    }
+    
+    .module-header {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        align-items: flex-start;
+    }
+    
+    .module-number-large {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        min-width: 60px;
+    }
+    
+    .module-card h2 {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    
+    .module-description {
+        color: #666;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .module-meta {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+    
+    .difficulty {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .difficulty-easy {
+        background-color: #d4edda;
+        color: #155724;
+    }
+    
+    .difficulty-medium {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+    
+    .difficulty-hard {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+    
+    .duration {
+        padding: 0.5rem 1rem;
+        background-color: #e7f3ff;
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .module-actions {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+    
+    .module-actions .btn {
+        flex: 1;
+        text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+        .modules-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What keyword is used to define a function?",
+    "options": [
+      "function",
+      "def",
+      "define",
+      "func"
+    ],
+    "correct_answer": 1,
+    "explanation": "Functions are defined with the `def` keyword: def function_name():"
+  },
+  {
+    "id": 2,
+    "question": "What does the 'return' statement do?",
+    "options": [
+      "Ends the program",
+      "Sends a value back to the caller",
+      "Restarts the function",
+      "Prints the value"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `return` statement sends a value back from the function to wherever it was called."
+  },
+  {
+    "id": 3,
+    "question": "What is a parameter in a function?",
+    "options": [
+      "A value returned by the function",
+      "A variable used to pass data to the function",
+      "The function name",
+      "A type of loop"
+    ],
+    "correct_answer": 1,
+    "explanation": "Parameters are variables defined in the function definition that receive arguments when the function is called."
+  },
+  {
+    "id": 4,
+    "question": "What will this output? def greet(): print('Hi') return 'Done'",
+    "options": [
+      "Hi\\nDone",
+      "Hi",
+      "Done",
+      "Error"
+    ],
+    "correct_answer": 1,
+    "explanation": "The function prints 'Hi' but returns 'Done'. Only the print statement produces output."
+  },
+  {
+    "id": 5,
+    "question": "How do you call a function named 'add' with arguments 5 and 3?",
+    "options": [
+      "add 5 3",
+      "add(5, 3)",
+      "call add(5 3)",
+      "add[5, 3]"
+    ],
+    "correct_answer": 1,
+    "explanation": "Functions are called with parentheses and arguments separated by commas: function_name(arg1, arg2)"
+  },
+  {
+    "id": 6,
+    "question": "What is a default parameter?",
+    "options": [
+      "A parameter that's always required",
+      "A parameter with a default value if not provided",
+      "The first parameter of a function",
+      "A parameter used only in loops"
+    ],
+    "correct_answer": 1,
+    "explanation": "A default parameter has a value assigned in the function definition, used if no argument is provided."
+  },
+  {
+    "id": 7,
+    "question": "What does *args allow in a function?",
+    "options": [
+      "Multiple keyword arguments",
+      "Variable number of positional arguments",
+      "Only string arguments",
+      "No arguments"
+    ],
+    "correct_answer": 1,
+    "explanation": "`*args` allows a function to accept any number of positional arguments as a tuple."
+  },
+  {
+    "id": 8,
+    "question": "What is a lambda function?",
+    "options": [
+      "A function without a name",
+      "A function with multiple returns",
+      "A built-in function",
+      "A loop function"
+    ],
+    "correct_answer": 0,
+    "explanation": "A lambda function is an anonymous function defined with `lambda:` used for simple operations."
+  },
+  {
+    "id": 9,
+    "question": "What is variable scope?",
+    "options": [
+      "The name of the variable",
+      "Where in code a variable can be accessed",
+      "The type of the variable",
+      "How many times the variable is used"
+    ],
+    "correct_answer": 1,
+    "explanation": "Scope determines where a variable can be accessed - globally or locally within a function."
+  },
+  {
+    "id": 10,
+    "question": "What does a function without a return statement return?",
+    "options": [
+      "0",
+      "False",
+      "None",
+      "Error"
+    ],
+    "correct_answer": 2,
+    "explanation": "Functions without an explicit return statement return `None` by default."
+  }
+]

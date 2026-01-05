@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the index of the first character in a string?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "None"
+    ],
+    "correct_answer": 1,
+    "explanation": "Strings use 0-based indexing. The first character is at index 0."
+  },
+  {
+    "id": 2,
+    "question": "What does 'hello'[1:4] return?",
+    "options": [
+      "'h'",
+      "'ell'",
+      "'ello'",
+      "'hello'"
+    ],
+    "correct_answer": 1,
+    "explanation": "Slicing [1:4] starts at index 1 and goes up to (but not including) index 4, giving 'ell'."
+  },
+  {
+    "id": 3,
+    "question": "What method converts a string to uppercase?",
+    "options": [
+      "upper()",
+      "uppercase()",
+      "toUpper()",
+      "UP()"
+    ],
+    "correct_answer": 0,
+    "explanation": "The `upper()` method returns a new string with all characters converted to uppercase."
+  },
+  {
+    "id": 4,
+    "question": "What does 'hello world'.split() return?",
+    "options": [
+      "'hello' + 'world'",
+      "['hello', 'world']",
+      "'helloworld'",
+      "'hello world'"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `split()` method breaks a string into a list of words, splitting on whitespace by default."
+  },
+  {
+    "id": 5,
+    "question": "What does ' '.join(['a', 'b', 'c']) return?",
+    "options": [
+      "['a', 'b', 'c']",
+      "'a b c'",
+      "'abc'",
+      "['a b c']"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `join()` method combines list items into a single string, using the string as separator."
+  },
+  {
+    "id": 6,
+    "question": "What is the correct f-string syntax?",
+    "options": [
+      "'Hello, {name}'",
+      "f'Hello, {name}'",
+      "'{0}'.format(name)",
+      "$'Hello, $name'"
+    ],
+    "correct_answer": 1,
+    "explanation": "F-strings start with `f` and use curly braces for variable insertion: f'Hello, {name}'"
+  },
+  {
+    "id": 7,
+    "question": "What does 'hello'.find('l') return?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "-1"
+    ],
+    "correct_answer": 2,
+    "explanation": "The `find()` method returns the index of the first occurrence. 'l' first appears at index 2 in 'hello'."
+  },
+  {
+    "id": 8,
+    "question": "What does 'hello'.replace('l', 'x') return?",
+    "options": [
+      "'hexxo'",
+      "'hexlo'",
+      "'hello'",
+      "'helxo'"
+    ],
+    "correct_answer": 0,
+    "explanation": "The `replace()` method replaces all occurrences. Both 'l's in 'hello' become 'x', giving 'hexxo'."
+  },
+  {
+    "id": 9,
+    "question": "What does 'Python'[::-1] return?",
+    "options": [
+      "'Python'",
+      "'nohtyP'",
+      "'yth'",
+      "Error"
+    ],
+    "correct_answer": 1,
+    "explanation": "The slice [::-1] reverses the string. 'Python' backwards is 'nohtyP'."
+  },
+  {
+    "id": 10,
+    "question": "What does 'hello'.strip() do?",
+    "options": [
+      "Removes 'h' and 'o'",
+      "Removes leading/trailing whitespace",
+      "Converts to lowercase",
+      "Reverses the string"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `strip()` method removes leading and trailing whitespace from a string."
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "id": "module9",
+  "title": "File Handling & OS Operations",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of the 'with' statement when opening files?",
+      "options": [
+        "Automatically closes the file even if errors occur",
+        "Speeds up file reading",
+        "Encrypts the file contents",
+        "Allows multiple files to be opened at once"
+      ],
+      "correct_answer": 0,
+      "explanation": "The with statement ensures proper file closure, even if an exception occurs inside the block."
+    },
+    {
+      "id": 2,
+      "question": "What does 'r' mode do when opening a file?",
+      "options": [
+        "Opens the file for reading",
+        "Opens the file for writing",
+        "Opens the file for random access",
+        "Opens the file in reverse order"
+      ],
+      "correct_answer": 0,
+      "explanation": "'r' mode opens a file for reading. The file must exist or an error occurs."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between 'w' and 'a' modes?",
+      "options": [
+        "'w' overwrites existing content, 'a' appends to the end",
+        "'a' overwrites existing content, 'w' appends",
+        "They do the same thing",
+        "'w' is for writing text, 'a' is for binary"
+      ],
+      "correct_answer": 0,
+      "explanation": "'w' mode creates a new file or overwrites existing, while 'a' mode appends to the end."
+    },
+    {
+      "id": 4,
+      "question": "What does Path.read_text() do?",
+      "options": [
+        "Reads the entire file contents as a string",
+        "Reads one line at a time",
+        "Reads the file path as text",
+        "Reads and returns file permissions"
+      ],
+      "correct_answer": 0,
+      "explanation": "Path.read_text() from pathlib reads the entire file contents into a single string."
+    },
+    {
+      "id": 5,
+      "question": "How do you get the file extension from a Path object?",
+      "options": [
+        "path.suffix",
+        "path.extension",
+        "path.ext",
+        "path.get_extension()"
+      ],
+      "correct_answer": 0,
+      "explanation": "The .suffix attribute returns the file extension (e.g., '.txt' from 'file.txt')."
+    },
+    {
+      "id": 6,
+      "question": "What does json.load() do?",
+      "options": [
+        "Parses JSON from a file into a Python object",
+        "Saves a Python object as JSON to a file",
+        "Loads a JSON library",
+        "Loads JSON from a string"
+      ],
+      "correct_answer": 0,
+      "explanation": "json.load() reads JSON from a file object and converts it to Python data structures."
+    },
+    {
+      "id": 7,
+      "question": "How do you create a directory if it doesn't exist?",
+      "options": [
+        "Path.mkdir(parents=True, exist_ok=True)",
+        "os.mkdir(path)",
+        "os.create_dir(path)",
+        "Path.create(parents=True)"
+      ],
+      "correct_answer": 0,
+      "explanation": "Path.mkdir() with exist_ok=True creates the directory and doesn't error if it exists."
+    },
+    {
+      "id": 8,
+      "question": "What does csv.reader() return?",
+      "options": [
+        "An iterator that parses CSV file rows",
+        "A list of all CSV data",
+        "The number of rows in the file",
+        "A file object"
+      ],
+      "correct_answer": 0,
+      "explanation": "csv.reader() returns an iterator that parses each row of CSV data."
+    },
+    {
+      "id": 9,
+      "question": "How do you walk through all files in a directory recursively?",
+      "options": [
+        "os.walk(directory) or Path.rglob('*')",
+        "os.list_all(directory)",
+        "directory.walk()",
+        "os.recursive_walk(directory)"
+      ],
+      "correct_answer": 0,
+      "explanation": "os.walk() yields directory contents recursively, or use Path.rglob() for a more modern approach."
+    },
+    {
+      "id": 10,
+      "question": "What is the benefit of using pathlib over os.path?",
+      "options": [
+        "Pathlib is more object-oriented and handles path separators automatically",
+        "os.path is faster",
+        "Pathlib only works on Windows",
+        "os.path is more readable"
+      ],
+      "correct_answer": 0,
+      "explanation": "pathlib provides an object-oriented approach to file paths that works across operating systems."
+    }
+  ]
+}

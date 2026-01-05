@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}PyPy - Learn Python Online{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Learn Python Like a Pro</h1>
+        <p>Master Python from absolute beginner to advanced programmer in 16-20 weeks</p>
+        <div class="hero-buttons">
+            <a href="/modules" class="btn btn-primary">Start Learning</a>
+            <a href="/roadmap" class="btn btn-secondary">View Roadmap</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="code-display">
+            <pre><code class="language-python">print("Welcome to PyPy! 🐍")</code></pre>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>10</h3>
+            <p>Comprehensive Modules</p>
+        </div>
+        <div class="stat-card">
+            <h3>70+</h3>
+            <p>Topics Covered</p>
+        </div>
+        <div class="stat-card">
+            <h3>100+</h3>
+            <p>Practice Exercises</p>
+        </div>
+        <div class="stat-card">
+            <h3>16-20</h3>
+            <p>Weeks Learning Path</p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <h2>Why Choose PyPy?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Structured Learning</h3>
+            <p>Follow a carefully designed curriculum that takes you from beginner to advanced</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Code Examples</h3>
+            <p>Every concept comes with real, runnable code examples with output</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✍️</div>
+            <h3>Practice Problems</h3>
+            <p>100+ exercises with solutions organized by difficulty level</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <h3>Interactive Quizzes</h3>
+            <p>Test your knowledge with quizzes after each module</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Real Projects</h3>
+            <p>Build 10+ real-world projects to apply what you've learned</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Self-Paced</h3>
+            <p>Learn at your own speed - 30-60 minutes per day</p>
+        </div>
+    </div>
+</section>
+
+<!-- Learning Phases -->
+<section class="learning-phases">
+    <h2>The 4 Learning Phases</h2>
+    <div class="phases-grid">
+        <div class="phase-card">
+            <div class="phase-number">1</div>
+            <h3>Foundations</h3>
+            <p><strong>Weeks 1-4</strong></p>
+            <ul>
+                <li>Introduction & Setup</li>
+                <li>Python Fundamentals</li>
+                <li>Control Flow</li>
+            </ul>
+            <p class="phase-goal">✓ Can write simple programs</p>
+        </div>
+        <div class="phase-card">
+            <div class="phase-number">2</div>
+            <h3>Text & Functions</h3>
+            <p><strong>Weeks 5-8</strong></p>
+            <ul>
+                <li>String Operations</li>
+                <li>Functions & Modules</li>
+                <li>Code Reusability</li>
+            </ul>
+            <p class="phase-goal">✓ Can write reusable code</p>
+        </div>
+        <div class="phase-card">
+            <div class="phase-number">3</div>
+            <h3>Data & OOP</h3>
+            <p><strong>Weeks 9-16</strong></p>
+            <ul>
+                <li>Data Structures</li>
+                <li>Object-Oriented Programming</li>
+                <li>Design Patterns</li>
+            </ul>
+            <p class="phase-goal">✓ Can build applications</p>
+        </div>
+        <div class="phase-card">
+            <div class="phase-number">4</div>
+            <h3>Advanced & Real-World</h3>
+            <p><strong>Weeks 17-20</strong></p>
+            <ul>
+                <li>Advanced Concepts</li>
+                <li>File Handling & OS</li>
+                <li>External Libraries</li>
+            </ul>
+            <p class="phase-goal">✓ Can use libraries & APIs</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modules Preview -->
+<section class="modules-preview">
+    <h2>What You'll Learn</h2>
+    <div class="modules-quick-grid">
+        {% for module in all_modules[:6] %}
+        <div class="module-preview-card">
+            <div class="module-number">{{ module.id }}</div>
+            <h3>{{ module.title }}</h3>
+            <a href="/module/{{ module.id }}" class="btn-small">Learn More →</a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="view-all">
+        <a href="/modules" class="btn btn-primary">View All 10 Modules</a>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <h2>Ready to Learn Python?</h2>
+    <p>Start your journey today with our comprehensive, beginner-friendly curriculum</p>
+    <a href="/modules" class="btn btn-primary btn-large">Get Started Now</a>
+</section>
+{% endblock %}

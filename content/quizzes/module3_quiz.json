@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the correct syntax for an if statement?",
+    "options": [
+      "if x > 5:",
+      "if (x > 5) {",
+      "if x > 5 then:",
+      "if x > 5"
+    ],
+    "correct_answer": 0,
+    "explanation": "Python if statements use the syntax: `if condition:` followed by indented code. A colon is required."
+  },
+  {
+    "id": 2,
+    "question": "What does the 'elif' keyword stand for?",
+    "options": [
+      "else if",
+      "end if",
+      "else include",
+      "elsif"
+    ],
+    "correct_answer": 0,
+    "explanation": "`elif` stands for 'else if' and allows checking multiple conditions in sequence."
+  },
+  {
+    "id": 3,
+    "question": "What will this code output? if 5 > 3: print('Yes') else: print('No')",
+    "options": [
+      "Yes",
+      "No",
+      "Yes No",
+      "Error"
+    ],
+    "correct_answer": 0,
+    "explanation": "Since 5 > 3 is True, the if block executes and prints 'Yes'."
+  },
+  {
+    "id": 4,
+    "question": "What does range(5) produce?",
+    "options": [
+      "[0, 1, 2, 3, 4, 5]",
+      "[0, 1, 2, 3, 4]",
+      "[1, 2, 3, 4, 5]",
+      "[5]"
+    ],
+    "correct_answer": 1,
+    "explanation": "range(5) produces numbers from 0 to 4 (not including 5). It's commonly used in for loops."
+  },
+  {
+    "id": 5,
+    "question": "How do you loop through a list in Python?",
+    "options": [
+      "for item in list:",
+      "foreach item in list:",
+      "for (item in list):",
+      "loop item in list:"
+    ],
+    "correct_answer": 0,
+    "explanation": "Python uses `for item in list:` syntax to iterate through list items."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of the 'break' statement?",
+    "options": [
+      "Exit the program",
+      "Exit the current loop",
+      "Exit the function",
+      "Pause the program"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `break` statement immediately exits the current loop, regardless of the loop condition."
+  },
+  {
+    "id": 7,
+    "question": "What does 'continue' do in a loop?",
+    "options": [
+      "Starts a new loop",
+      "Skips to the next iteration",
+      "Ends the program",
+      "Pauses the loop"
+    ],
+    "correct_answer": 1,
+    "explanation": "The `continue` statement skips the rest of the current iteration and moves to the next one."
+  },
+  {
+    "id": 8,
+    "question": "What is the output of: for i in range(3): print(i)",
+    "options": [
+      "0 1 2 3",
+      "1 2 3",
+      "0\\n1\\n2",
+      "3"
+    ],
+    "correct_answer": 2,
+    "explanation": "This prints 0, 1, and 2 on separate lines. range(3) includes 0 through 2 (not 3)."
+  },
+  {
+    "id": 9,
+    "question": "What is true about a while True loop?",
+    "options": [
+      "It runs exactly once",
+      "It never runs",
+      "It runs forever until break is used",
+      "It runs 10 times"
+    ],
+    "correct_answer": 2,
+    "explanation": "A `while True:` loop creates an infinite loop that continues until a `break` statement is encountered."
+  },
+  {
+    "id": 10,
+    "question": "Which logical operator means 'NOT'?",
+    "options": [
+      "!",
+      "not",
+      "~",
+      "!"
+    ],
+    "correct_answer": 1,
+    "explanation": "Python uses the `not` keyword to negate a boolean value. It reverses True to False and vice versa."
+  }
+]

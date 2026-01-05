@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PyPy - Python Learning Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">🐍 PyPy</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/modules" class="nav-link">Modules</a></li>
+                <li><a href="/roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="/practice" class="nav-link">Practice</a></li>
+                <li><a href="/quizzes" class="nav-link">Quizzes</a></li>
+                <li><a href="/resources" class="nav-link">Resources</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>PyPy</h3>
+                <p>Learn Python from beginner to advanced in 16-20 weeks</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/modules">Modules</a></li>
+                    <li><a href="/roadmap">Learning Path</a></li>
+                    <li><a href="/resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Learning</h4>
+                <ul>
+                    <li><a href="/practice">Practice Exercises</a></li>
+                    <li><a href="/quizzes">Quizzes</a></li>
+                    <li><a href="/resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="/about">About PyPy</a></li>
+                    <li><a href="mailto:contact@pypy.dev">Contact</a></li>
+                    <li><a href="https://github.com/IshtiAK47/" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PyPy - Python Learning Platform. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #999;">Developed by <strong>Ishtiak Mahmood</strong> | <a href="https://github.com/IshtiAK47/" target="_blank" style="color: #ffd43b;">GitHub Profile</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

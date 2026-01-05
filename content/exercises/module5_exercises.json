@@ -1,0 +1,46 @@
+{
+  "id": "module5",
+  "title": "Module 5: Functions",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Define a Function",
+      "difficulty": "easy",
+      "description": "Create function greet() that prints 'Hello, World!'",
+      "code_template": "# Define greet function\n",
+      "expected_answer": "def greet():\n    print('Hello, World!')\ngreet()",
+      "solution": "def greet():\n    print('Hello, World!')\ngreet()",
+      "explanation": "Functions are defined with def and called with parentheses."
+    },
+    {
+      "id": 2,
+      "title": "Function with Parameters",
+      "difficulty": "easy",
+      "description": "Create add(a, b) that returns the sum",
+      "code_template": "# Define add function\n",
+      "expected_answer": "def add(a, b):\n    return a + b",
+      "solution": "def add(a, b):\n    return a + b\nprint(add(5, 3))",
+      "explanation": "Parameters are placeholders for values. return sends value back."
+    },
+    {
+      "id": 3,
+      "title": "Function with Default Parameter",
+      "difficulty": "medium",
+      "description": "Create power(x, n=2) that returns x to the power of n",
+      "code_template": "# Default parameter\n",
+      "expected_answer": "def power(x, n=2):\n    return x ** n",
+      "solution": "def power(x, n=2):\n    return x ** n\nprint(power(3))\nprint(power(3, 3))",
+      "explanation": "Default parameter: n=2 means n defaults to 2 if not provided."
+    },
+    {
+      "id": 4,
+      "title": "Lambda Function",
+      "difficulty": "medium",
+      "description": "Create lambda that squares a number",
+      "code_template": "# Lambda function for squaring\nsquare = \n",
+      "expected_answer": "lambda x: x ** 2",
+      "solution": "square = lambda x: x ** 2\nprint(square(5))",
+      "explanation": "Lambda: compact function. lambda x: result"
+    }
+  ]
+}

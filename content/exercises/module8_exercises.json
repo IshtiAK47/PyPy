@@ -1,0 +1,46 @@
+{
+  "id": "module8",
+  "title": "Module 8: Advanced Topics",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Try-Except Block",
+      "difficulty": "easy",
+      "description": "Handle division by zero error",
+      "code_template": "try:\n    result = 10 / 0\nexcept:\n    # Your code\n",
+      "expected_answer": "print('Cannot divide by zero')",
+      "solution": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+      "explanation": "except catches errors and handles them gracefully."
+    },
+    {
+      "id": 2,
+      "title": "Custom Exception",
+      "difficulty": "easy",
+      "description": "Create and raise custom exception",
+      "code_template": "class NegativeAgeError(Exception):\n    pass\n\nage = -5\nif age < 0:\n    # Your code\n",
+      "expected_answer": "raise NegativeAgeError('Age cannot be negative')",
+      "solution": "raise NegativeAgeError('Age cannot be negative')",
+      "explanation": "Raise custom exceptions for specific errors."
+    },
+    {
+      "id": 3,
+      "title": "Generator Function",
+      "difficulty": "medium",
+      "description": "Create generator that yields 1, 2, 3",
+      "code_template": "def count_up():\n    # Your code\n",
+      "expected_answer": "yield 1\n    yield 2\n    yield 3",
+      "solution": "def count_up():\n    yield 1\n    yield 2\n    yield 3\nfor num in count_up():\n    print(num)",
+      "explanation": "yield turns function into generator (lazy evaluation)."
+    },
+    {
+      "id": 4,
+      "title": "Decorator",
+      "difficulty": "medium",
+      "description": "Create decorator that prints function name",
+      "code_template": "def my_decorator(func):\n    def wrapper():\n        # Your code\n        func()\n    return wrapper\n",
+      "expected_answer": "print(f'Calling {func.__name__}')",
+      "solution": "def my_decorator(func):\n    def wrapper():\n        print(f'Calling {func.__name__}')\n        func()\n    return wrapper",
+      "explanation": "Decorators wrap functions to enhance them."
+    }
+  ]
+}

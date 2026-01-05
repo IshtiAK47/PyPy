@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Quizzes - PyPy{% endblock %}
+
+{% block content %}
+<section class="quizzes-section">
+    <div class="section-header">
+        <h1>Test Your Knowledge</h1>
+        <p>Take quizzes to test what you've learned in each module</p>
+    </div>
+    
+    <div class="quizzes-grid">
+        {% for module in all_modules %}
+        <div class="quiz-card">
+            <div class="quiz-number">{{ module.id }}</div>
+            <h3>Module {{ module.id }} Quiz</h3>
+            <p class="quiz-description">
+                {% if module.id == 1 %}
+                    Test your knowledge of Python basics and setup
+                {% elif module.id == 2 %}
+                    Review variables, data types, and operators
+                {% elif module.id == 3 %}
+                    Check your understanding of control flow and loops
+                {% elif module.id == 4 %}
+                    Master string manipulation and formatting
+                {% elif module.id == 5 %}
+                    Verify your knowledge of functions and modules
+                {% elif module.id == 6 %}
+                    Test data structure knowledge
+                {% elif module.id == 7 %}
+                    Review object-oriented programming concepts
+                {% elif module.id == 8 %}
+                    Advanced Python concepts quiz
+                {% elif module.id == 9 %}
+                    File handling and OS operations quiz
+                {% elif module.id == 10 %}
+                    External libraries and APIs quiz
+                {% endif %}
+            </p>
+            <div class="quiz-info">
+                <span class="questions">10 questions</span>
+                <span class="time">15-20 min</span>
+            </div>
+            <a href="/quiz/{{ module.id }}" class="btn btn-primary btn-block">Start Quiz</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<style>
+    .quizzes-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-header h1 {
+        color: var(--primary-color);
+    }
+    
+    .quizzes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .quiz-card {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: var(--spacing-lg);
+        text-align: center;
+        transition: var(--transition);
+        position: relative;
+    }
+    
+    .quiz-card:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--box-shadow);
+        transform: translateY(-5px);
+    }
+    
+    .quiz-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .quiz-card h3 {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .quiz-description {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: var(--spacing-md);
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .quiz-info {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: var(--spacing-lg);
+        padding: var(--spacing-md) 0;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .quiz-info span {
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    
+    .btn-block {
+        width: 100%;
+    }
+    
+    @media (max-width: 768px) {
+        .quizzes-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}

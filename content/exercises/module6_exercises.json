@@ -1,0 +1,46 @@
+{
+  "id": "module6",
+  "title": "Module 6: Data Structures",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Create and Modify List",
+      "difficulty": "easy",
+      "description": "Create list [1, 2, 3], add 4, remove 2",
+      "code_template": "numbers = [1, 2, 3]\n# Add 4\n# Remove 2\n",
+      "expected_answer": "numbers.append(4)\nnumbers.remove(2)",
+      "solution": "numbers.append(4)\nnumbers.remove(2)\nprint(numbers)",
+      "explanation": "append() adds to end, remove() deletes first occurrence."
+    },
+    {
+      "id": 2,
+      "title": "List Comprehension",
+      "difficulty": "easy",
+      "description": "Create list of squares: [1, 4, 9, 16, 25]",
+      "code_template": "# List comprehension\nsquares = \n",
+      "expected_answer": "[x**2 for x in range(1, 6)]",
+      "solution": "squares = [x**2 for x in range(1, 6)]\nprint(squares)",
+      "explanation": "List comprehension: [expression for item in iterable]"
+    },
+    {
+      "id": 3,
+      "title": "Dictionary Operations",
+      "difficulty": "medium",
+      "description": "Create dict: {'name': 'Alice', 'age': 25}, get name",
+      "code_template": "# Create dict\nperson = \n# Get name\nname = \n",
+      "expected_answer": "person = {'name': 'Alice', 'age': 25}\nname = person['name']",
+      "solution": "person = {'name': 'Alice', 'age': 25}\nname = person['name']\nprint(name)",
+      "explanation": "Dictionary uses keys to access values: dict[key]"
+    },
+    {
+      "id": 4,
+      "title": "Set Operations",
+      "difficulty": "medium",
+      "description": "Find unique elements in [1, 2, 2, 3, 3, 3]",
+      "code_template": "numbers = [1, 2, 2, 3, 3, 3]\n# Make unique\n",
+      "expected_answer": "set(numbers)",
+      "solution": "unique = set(numbers)\nprint(unique)",
+      "explanation": "set() removes duplicates automatically."
+    }
+  ]
+}

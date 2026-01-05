@@ -1,0 +1,46 @@
+{
+  "id": "module4",
+  "title": "Module 4: Strings",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "String Methods",
+      "difficulty": "easy",
+      "description": "Convert 'python' to uppercase",
+      "code_template": "text = 'python'\n# Convert to uppercase\n",
+      "expected_answer": "text.upper()",
+      "solution": "result = text.upper()\nprint(result)",
+      "explanation": "Use .upper() method to convert to uppercase."
+    },
+    {
+      "id": 2,
+      "title": "String Slicing",
+      "difficulty": "easy",
+      "description": "Get first 3 characters of 'Python'",
+      "code_template": "word = 'Python'\n# Get first 3\n",
+      "expected_answer": "word[:3]",
+      "solution": "result = word[:3]\nprint(result)",
+      "explanation": "Slicing: word[start:end] gets characters from start to end-1."
+    },
+    {
+      "id": 3,
+      "title": "F-String Formatting",
+      "difficulty": "medium",
+      "description": "Create f-string: 'Hello, Alice! You are 25 years old'",
+      "code_template": "name = 'Alice'\nage = 25\n# Use f-string\n",
+      "expected_answer": "f'Hello, {name}! You are {age} years old'",
+      "solution": "message = f'Hello, {name}! You are {age} years old'\nprint(message)",
+      "explanation": "F-strings use {} to insert variables into strings."
+    },
+    {
+      "id": 4,
+      "title": "String Find",
+      "difficulty": "medium",
+      "description": "Find the position of 'o' in 'Python'",
+      "code_template": "word = 'Python'\n# Find position of 'o'\n",
+      "expected_answer": "word.find('o')",
+      "solution": "position = word.find('o')\nprint(position)",
+      "explanation": "find() returns the index of the first occurrence."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "module9",
+  "title": "Module 9: File Handling & OS",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Read File",
+      "difficulty": "easy",
+      "description": "Read entire file with open() and with statement",
+      "code_template": "with open('data.txt', 'r') as file:\n    # Your code\n",
+      "expected_answer": "content = file.read()",
+      "solution": "with open('data.txt', 'r') as file:\n    content = file.read()\n    print(content)",
+      "explanation": "with statement automatically closes file."
+    },
+    {
+      "id": 2,
+      "title": "Write to File",
+      "difficulty": "easy",
+      "description": "Write 'Hello' to output.txt",
+      "code_template": "with open('output.txt', 'w') as file:\n    # Your code\n",
+      "expected_answer": "file.write('Hello')",
+      "solution": "with open('output.txt', 'w') as file:\n    file.write('Hello')",
+      "explanation": "'w' mode creates/overwrites file. 'a' appends."
+    },
+    {
+      "id": 3,
+      "title": "Path Operations",
+      "difficulty": "medium",
+      "description": "Get file extension from Path object",
+      "code_template": "from pathlib import Path\npath = Path('document.txt')\n# Get extension\n",
+      "expected_answer": "path.suffix",
+      "solution": "from pathlib import Path\npath = Path('document.txt')\nprint(path.suffix)",
+      "explanation": ".suffix returns file extension like '.txt'"
+    },
+    {
+      "id": 4,
+      "title": "JSON File",
+      "difficulty": "medium",
+      "description": "Load JSON from file",
+      "code_template": "import json\nwith open('data.json', 'r') as f:\n    # Your code\n",
+      "expected_answer": "data = json.load(f)",
+      "solution": "import json\nwith open('data.json', 'r') as f:\n    data = json.load(f)\n    print(data)",
+      "explanation": "json.load() parses JSON from file into Python objects."
+    }
+  ]
+}

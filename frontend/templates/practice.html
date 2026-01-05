@@ -1,0 +1,413 @@
+{% extends "base.html" %}
+
+{% block title %}Practice - PyPy{% endblock %}
+
+{% block content %}
+<section class="practice-section">
+    <div class="section-header">
+        <h1>Practice Exercises</h1>
+        <p>Strengthen your skills with hands-on exercises</p>
+    </div>
+    
+    <div class="module-selector">
+        <label for="module-select">Select Module:</label>
+        <select id="module-select">
+            <option value="">-- Choose a module --</option>
+        </select>
+    </div>
+    
+    <div class="practice-container" id="exercises-container">
+        <div class="loading">
+            <p>Select a module to view exercises...</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .practice-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-header h1 {
+        color: var(--primary-color);
+    }
+    
+    .module-selector {
+        margin-bottom: var(--spacing-xl);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    .module-selector label {
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    
+    .module-selector select {
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--primary-color);
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: white;
+        min-width: 300px;
+    }
+    
+    .module-selector select:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(55, 118, 171, 0.1);
+    }
+    
+    .practice-container {
+        background: white;
+        border-radius: 12px;
+        padding: var(--spacing-lg);
+        box-shadow: var(--box-shadow);
+    }
+    
+    .exercises-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .exercise-card {
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        padding: var(--spacing-lg);
+        transition: var(--transition);
+    }
+    
+    .exercise-card:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--box-shadow);
+    }
+    
+    .exercise-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .exercise-header h4 {
+        color: var(--primary-color);
+        margin: 0;
+    }
+    
+    .difficulty-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    .difficulty-easy {
+        background-color: #d4edda;
+        color: #155724;
+    }
+    
+    .difficulty-medium {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+    
+    .difficulty-hard {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+    
+    .exercise-description {
+        color: #666;
+        margin-bottom: var(--spacing-md);
+        font-size: 1rem;
+    }
+    
+    .code-editor {
+        background: #282c34;
+        padding: var(--spacing-md);
+        border-radius: 8px;
+        margin: var(--spacing-md) 0;
+    }
+    
+    .code-editor textarea {
+        width: 100%;
+        min-height: 100px;
+        padding: var(--spacing-md);
+        border: none;
+        background: #1e1e1e;
+        color: #d4d4d4;
+        font-family: 'Courier New', monospace;
+        font-size: 0.95rem;
+        border-radius: 4px;
+        resize: vertical;
+    }
+    
+    .code-editor textarea:focus {
+        outline: 2px solid var(--primary-color);
+    }
+    
+    .exercise-buttons {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+    
+    .btn-exercise {
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .btn-check {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .btn-check:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+    
+    .btn-solution {
+        background-color: #10a981;
+        color: white;
+    }
+    
+    .btn-solution:hover {
+        opacity: 0.9;
+    }
+    
+    .btn-reset {
+        background-color: #999;
+        color: white;
+    }
+    
+    .btn-reset:hover {
+        opacity: 0.9;
+    }
+    
+    .exercise-feedback {
+        margin-top: var(--spacing-md);
+        padding: var(--spacing-md);
+        border-radius: 8px;
+        display: none;
+    }
+    
+    .feedback-correct {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+        display: block;
+    }
+    
+    .feedback-incorrect {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+        display: block;
+    }
+    
+    .exercise-solution {
+        background: #f9f9f9;
+        padding: var(--spacing-md);
+        border-radius: 8px;
+        margin-top: var(--spacing-md);
+        border-left: 4px solid var(--primary-color);
+        display: none;
+    }
+    
+    .exercise-solution.show {
+        display: block;
+    }
+    
+    .exercise-solution h5 {
+        color: var(--primary-color);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .exercise-solution pre {
+        background: #282c34;
+        color: #d4d4d4;
+        padding: var(--spacing-md);
+        border-radius: 6px;
+        overflow-x: auto;
+        margin: var(--spacing-md) 0 0 0;
+        font-size: 0.9rem;
+    }
+    
+    .solution-explanation {
+        color: #666;
+        margin-top: var(--spacing-md);
+        font-size: 0.95rem;
+    }
+    
+    .loading {
+        text-align: center;
+        padding: var(--spacing-xl);
+        color: #999;
+    }
+    
+    @media (max-width: 768px) {
+        .module-selector {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .module-selector select {
+            width: 100%;
+            min-width: auto;
+        }
+        
+        .exercise-buttons {
+            flex-direction: column;
+        }
+        
+        .btn-exercise {
+            width: 100%;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const moduleSelect = document.getElementById('module-select');
+    const exercisesContainer = document.getElementById('exercises-container');
+    
+    // Populate module selector
+    const allModules = {{ all_modules|tojson }};
+    allModules.forEach(module => {
+        const option = document.createElement('option');
+        option.value = module.id;
+        option.textContent = `Module ${module.id}`;
+        moduleSelect.appendChild(option);
+    });
+    
+    // Load exercises when module is selected
+    moduleSelect.addEventListener('change', function() {
+        const moduleId = this.value;
+        if (!moduleId) {
+            exercisesContainer.innerHTML = '<div class="loading"><p>Select a module to view exercises...</p></div>';
+            return;
+        }
+        
+        loadExercises(moduleId);
+    });
+    
+    function loadExercises(moduleId) {
+        fetch(`/api/exercises/${moduleId}`)
+            .then(response => response.json())
+            .then(data => {
+                renderExercises(data.exercises || []);
+            })
+            .catch(error => {
+                exercisesContainer.innerHTML = '<div class="loading"><p>Error loading exercises</p></div>';
+                console.error('Error:', error);
+            });
+    }
+    
+    function renderExercises(exercises) {
+        if (exercises.length === 0) {
+            exercisesContainer.innerHTML = '<div class="loading"><p>No exercises available for this module yet.</p></div>';
+            return;
+        }
+        
+        let html = '<div class="exercises-list">';
+        
+        exercises.forEach(exercise => {
+            const difficultyClass = `difficulty-${exercise.difficulty}`;
+            html += `
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h4>${exercise.title}</h4>
+                        <span class="difficulty-badge ${difficultyClass}">${exercise.difficulty.toUpperCase()}</span>
+                    </div>
+                    <p class="exercise-description">${exercise.description}</p>
+                    
+                    <div class="code-editor">
+                        <textarea class="exercise-code" data-id="${exercise.id}" placeholder="Write your code here...">${exercise.code_template}</textarea>
+                    </div>
+                    
+                    <div class="exercise-buttons">
+                        <button class="btn-exercise btn-check" onclick="checkExercise(${exercise.id}, this)">Check Answer</button>
+                        <button class="btn-exercise btn-solution" onclick="showSolution(${exercise.id}, this)">Show Solution</button>
+                        <button class="btn-exercise btn-reset" onclick="resetExercise(${exercise.id}, this)">Reset</button>
+                    </div>
+                    
+                    <div class="exercise-feedback" id="feedback-${exercise.id}"></div>
+                    
+                    <div class="exercise-solution" id="solution-${exercise.id}">
+                        <h5>Solution</h5>
+                        <pre><code>${exercise.solution}</code></pre>
+                        <p class="solution-explanation"><strong>Explanation:</strong> ${exercise.explanation}</p>
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+        exercisesContainer.innerHTML = html;
+        
+        // Highlight code blocks
+        document.querySelectorAll('pre code').forEach(block => {
+            hljs.highlightElement(block);
+        });
+    }
+});
+
+function checkExercise(exerciseId, button) {
+    const textarea = document.querySelector(`.exercise-code[data-id="${exerciseId}"]`);
+    const userCode = textarea.value;
+    const feedbackDiv = document.getElementById(`feedback-${exerciseId}`);
+    
+    // Simple check - compare trimmed code
+    // In a real app, you'd send to backend for validation
+    const expectedCode = textarea.placeholder;
+    const isCorrect = userCode.trim().toLowerCase() === expectedCode.toLowerCase();
+    
+    feedbackDiv.className = isCorrect ? 'exercise-feedback feedback-correct' : 'exercise-feedback feedback-incorrect';
+    feedbackDiv.innerHTML = isCorrect ? 
+        '<strong>Correct!</strong> Great job! Your solution is correct.' :
+        '<strong>Not quite right.</strong> Review your code and try again, or click "Show Solution" for help.';
+}
+
+function showSolution(exerciseId, button) {
+    const solutionDiv = document.getElementById(`solution-${exerciseId}`);
+    solutionDiv.classList.toggle('show');
+    button.textContent = solutionDiv.classList.contains('show') ? 'Hide Solution' : 'Show Solution';
+}
+
+function resetExercise(exerciseId, button) {
+    const textarea = document.querySelector(`.exercise-code[data-id="${exerciseId}"]`);
+    const solutionDiv = document.getElementById(`solution-${exerciseId}`);
+    const feedbackDiv = document.getElementById(`feedback-${exerciseId}`);
+    
+    // Reset to template
+    const template = textarea.getAttribute('data-template') || '';
+    textarea.value = template;
+    
+    solutionDiv.classList.remove('show');
+    feedbackDiv.className = 'exercise-feedback';
+    feedbackDiv.innerHTML = '';
+    
+    const showBtn = button.parentElement.querySelector('.btn-solution');
+    if (showBtn) showBtn.textContent = 'Show Solution';
+}
+</script>
+{% endblock %}

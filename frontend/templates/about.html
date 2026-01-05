@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}About PyPy{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-container">
+        <h1>About PyPy</h1>
+        <p class="about-intro">A comprehensive Python learning platform from beginner to advanced</p>
+    </div>
+</section>
+
+<section class="about-content">
+    <div class="container">
+        <h2>What is PyPy?</h2>
+        <p>
+            PyPy is a professional-grade Python learning platform designed to take you from absolute beginner 
+            to intermediate/advanced programmer in 16-20 weeks. Created by developers, for learners, it combines 
+            structured curriculum with practical exercises and real-world projects.
+        </p>
+        
+        <h2>Our Mission</h2>
+        <p>
+            To make Python accessible to everyone through a comprehensive, beginner-friendly curriculum that 
+            teaches not just syntax, but real programming concepts and best practices.
+        </p>
+        
+        <h2>About the Developer</h2>
+        <div class="developer-info" style="background: linear-gradient(135deg, #3776ab 0%, #2c5aa0 100%); color: white; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+            <h3>Ishtiak Mahmood</h3>
+            <p><strong>Full Stack Developer & Python Educator</strong></p>
+            <p>Creator of PyPy, a comprehensive Python learning platform designed to help beginners master Python from fundamentals to advanced concepts.</p>
+            <p style="margin-top: 1rem;">
+                <a href="https://github.com/IshtiAK47/" target="_blank" style="color: #ffd43b; text-decoration: none; font-weight: 600;">→ View on GitHub</a>
+            </p>
+        </div>
+
+        <h2>The 10 Modules</h2>
+        <div class="modules-overview">
+            <div class="module-overview">
+                <h4>Module 1: Introduction</h4>
+                <p>Get started with Python - install it, set up your environment, and write your first program.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 2: Fundamentals</h4>
+                <p>Learn variables, data types, operators, and the basics of programming logic.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 3: Control Flow</h4>
+                <p>Master if-else statements, loops, and controlling program execution.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 4: Strings</h4>
+                <p>Work with text - string methods, formatting, and manipulation techniques.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 5: Functions</h4>
+                <p>Create reusable code with functions, lambda expressions, and modules.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 6: Data Structures</h4>
+                <p>Organize data with lists, dictionaries, sets, and tuples.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 7: OOP</h4>
+                <p>Build applications with object-oriented programming and design patterns.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 8: Advanced</h4>
+                <p>Decorators, generators, exception handling, and functional programming.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 9: File Handling</h4>
+                <p>Read and write files, work with the operating system and file paths.</p>
+            </div>
+            <div class="module-overview">
+                <h4>Module 10: Libraries</h4>
+                <p>Use external libraries, work with APIs, and build real applications.</p>
+            </div>
+        </div>
+        
+        <h2>Why Choose PyPy?</h2>
+        <ul class="features-list">
+            <li><strong>Comprehensive:</strong> 70+ topics covering everything from basics to advanced</li>
+            <li><strong>Beginner-Friendly:</strong> Assumes zero prior programming knowledge</li>
+            <li><strong>Structured:</strong> 4 learning phases with clear progression</li>
+            <li><strong>Practical:</strong> 100+ exercises and 10+ real-world projects</li>
+            <li><strong>Interactive:</strong> Quizzes, exercises, and instant feedback</li>
+            <li><strong>Self-Paced:</strong> Learn at your own speed, 30-60 minutes per day</li>
+            <li><strong>Free:</strong> Open-source and available to everyone</li>
+        </ul>
+        
+        <h2>Learning Path</h2>
+        <div class="learning-path">
+            <div class="phase">
+                <h4>Phase 1: Foundations</h4>
+                <p><strong>Weeks 1-4</strong></p>
+                <p>Learn Python basics and write simple programs</p>
+                <p class="phase-modules">Modules 1, 2, 3</p>
+            </div>
+            <div class="phase">
+                <h4>Phase 2: Text & Functions</h4>
+                <p><strong>Weeks 5-8</strong></p>
+                <p>Master strings, functions, and code organization</p>
+                <p class="phase-modules">Modules 4, 5</p>
+            </div>
+            <div class="phase">
+                <h4>Phase 3: Data & OOP</h4>
+                <p><strong>Weeks 9-16</strong></p>
+                <p>Build applications with data structures and OOP</p>
+                <p class="phase-modules">Modules 6, 7</p>
+            </div>
+            <div class="phase">
+                <h4>Phase 4: Advanced</h4>
+                <p><strong>Weeks 17-20</strong></p>
+                <p>Use advanced features and external libraries</p>
+                <p class="phase-modules">Modules 8, 9, 10</p>
+            </div>
+        </div>
+        
+        <h2>Getting Started</h2>
+        <p>
+            Ready to learn Python? <a href="/modules">Start with Module 1</a> or check out the 
+            <a href="/roadmap">learning roadmap</a> to see the full curriculum.
+        </p>
+    </div>
+</section>
+
+<style>
+    .about-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+        color: white;
+        padding: var(--spacing-xl) var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .about-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .about-container h1 {
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+    
+    .about-intro {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    
+    .about-content {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .about-content h2 {
+        color: var(--primary-color);
+        margin-top: var(--spacing-xl);
+    }
+    
+    .modules-overview {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+        margin: var(--spacing-lg) 0;
+    }
+    
+    .module-overview {
+        background: #f9f9f9;
+        padding: var(--spacing-md);
+        border-radius: 8px;
+        border-left: 4px solid var(--primary-color);
+    }
+    
+    .module-overview h4 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .module-overview p {
+        margin: 0;
+        color: #666;
+        font-size: 0.95rem;
+    }
+    
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: var(--spacing-lg) 0;
+    }
+    
+    .features-list li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        color: #333;
+    }
+    
+    .features-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--success-color);
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    .learning-path {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-lg);
+        margin: var(--spacing-xl) 0;
+    }
+    
+    .phase {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+        color: white;
+        padding: var(--spacing-lg);
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .phase h4 {
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+    
+    .phase p {
+        margin-bottom: 0.5rem;
+    }
+    
+    .phase-modules {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+</style>
+{% endblock %}

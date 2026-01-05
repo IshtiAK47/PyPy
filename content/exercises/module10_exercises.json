@@ -1,0 +1,46 @@
+{
+  "id": "module10",
+  "title": "Module 10: Libraries & APIs",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Install Package",
+      "difficulty": "easy",
+      "description": "Command to install requests library",
+      "code_template": "# Type the pip command to install requests\n",
+      "expected_answer": "pip install requests",
+      "solution": "pip install requests",
+      "explanation": "Use pip to install packages from Python Package Index."
+    },
+    {
+      "id": 2,
+      "title": "Import Library",
+      "difficulty": "easy",
+      "description": "Import requests library",
+      "code_template": "# Import requests\n",
+      "expected_answer": "import requests",
+      "solution": "import requests",
+      "explanation": "After installing, use import to use the library."
+    },
+    {
+      "id": 3,
+      "title": "HTTP Request",
+      "difficulty": "medium",
+      "description": "Make GET request to https://api.example.com/data",
+      "code_template": "import requests\nurl = 'https://api.example.com/data'\n# Your code\n",
+      "expected_answer": "response = requests.get(url)",
+      "solution": "response = requests.get(url)",
+      "explanation": "requests.get() makes HTTP GET request."
+    },
+    {
+      "id": 4,
+      "title": "Parse JSON Response",
+      "difficulty": "medium",
+      "description": "Get JSON from response object",
+      "code_template": "import requests\nresponse = requests.get('https://api.example.com/user')\n# Parse JSON\ndata = \n",
+      "expected_answer": "response.json()",
+      "solution": "data = response.json()",
+      "explanation": "response.json() parses JSON response into Python dict."
+    }
+  ]
+}

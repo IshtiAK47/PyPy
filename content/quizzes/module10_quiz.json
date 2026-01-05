@@ -1,0 +1,126 @@
+{
+  "id": "module10",
+  "title": "Libraries & APIs",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is pip?",
+      "options": [
+        "Python package installer for downloading libraries from PyPI",
+        "A Python interactive shell",
+        "A code editor for Python",
+        "A Python testing framework"
+      ],
+      "correct_answer": 0,
+      "explanation": "pip is the package installer for Python that downloads and installs packages from the Python Package Index."
+    },
+    {
+      "id": 2,
+      "question": "How do you install a specific version of a package?",
+      "options": [
+        "pip install package==1.2.3",
+        "pip install package:1.2.3",
+        "pip install package-1.2.3",
+        "pip install package@1.2.3"
+      ],
+      "correct_answer": 0,
+      "explanation": "Use the == operator to specify an exact version: pip install requests==2.28.0"
+    },
+    {
+      "id": 3,
+      "question": "What does requests.get() return?",
+      "options": [
+        "A Response object with status_code, text, json() methods",
+        "A string with the webpage content",
+        "A dictionary of data",
+        "A file object"
+      ],
+      "correct_answer": 0,
+      "explanation": "requests.get() returns a Response object with properties like status_code and methods like .json()."
+    },
+    {
+      "id": 4,
+      "question": "What does response.status_code 200 mean?",
+      "options": [
+        "HTTP request was successful",
+        "Server not found",
+        "Access denied",
+        "Invalid syntax"
+      ],
+      "correct_answer": 0,
+      "explanation": "Status code 200 means OK - the request succeeded and the server returned the requested data."
+    },
+    {
+      "id": 5,
+      "question": "How do you pass query parameters with requests?",
+      "options": [
+        "requests.get(url, params={'key': 'value'})",
+        "requests.get(url, query={'key': 'value'})",
+        "requests.get(url + '?key=value')",
+        "requests.get(url, args={'key': 'value'})"
+      ],
+      "correct_answer": 0,
+      "explanation": "Use the params parameter to pass query parameters as a dictionary."
+    },
+    {
+      "id": 6,
+      "question": "What is an API?",
+      "options": [
+        "Application Programming Interface - a way for programs to communicate",
+        "A Python file",
+        "An application server",
+        "A type of database"
+      ],
+      "correct_answer": 0,
+      "explanation": "An API defines how software components interact, allowing programs to request and exchange data."
+    },
+    {
+      "id": 7,
+      "question": "What does response.json() do?",
+      "options": [
+        "Parses the response body as JSON and returns Python data",
+        "Saves the response as a JSON file",
+        "Checks if the response contains JSON",
+        "Converts Python data to JSON"
+      ],
+      "correct_answer": 0,
+      "explanation": "response.json() automatically parses JSON from the response body into Python data structures."
+    },
+    {
+      "id": 8,
+      "question": "How do you handle a timeout in requests?",
+      "options": [
+        "requests.get(url, timeout=5) with try-except for requests.Timeout",
+        "requests.get(url, wait=5)",
+        "requests.set_timeout(5); requests.get(url)",
+        "Add timeout in requests config"
+      ],
+      "correct_answer": 0,
+      "explanation": "Pass timeout parameter and catch requests.Timeout exception to handle slow or unresponsive servers."
+    },
+    {
+      "id": 9,
+      "question": "What is pagination in API calls?",
+      "options": [
+        "Getting large datasets in smaller pages/chunks",
+        "Formatting API responses",
+        "Caching API data",
+        "Encrypting API requests"
+      ],
+      "correct_answer": 0,
+      "explanation": "Pagination allows requesting large datasets in smaller chunks using page parameters."
+    },
+    {
+      "id": 10,
+      "question": "What should you do if an API has rate limits?",
+      "options": [
+        "Add delays between requests to avoid exceeding limits",
+        "Try to bypass rate limits with faster code",
+        "Make unlimited requests",
+        "Use a different API"
+      ],
+      "correct_answer": 0,
+      "explanation": "Respect rate limits by adding delays between requests using time.sleep() or similar mechanisms."
+    }
+  ]
+}

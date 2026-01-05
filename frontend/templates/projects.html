@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - PyPy{% endblock %}
+
+{% block content %}
+<section class="projects-section">
+    <div class="section-header">
+        <h1>Real-World Projects</h1>
+        <p>Build 10+ projects to apply your Python skills</p>
+    </div>
+    
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-icon">🎮</div>
+            <h3>Number Guessing Game</h3>
+            <p class="difficulty">Beginner</p>
+            <p>Create an interactive game where the computer thinks of a number and you try to guess it.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">📊</div>
+            <h3>Grade Calculator</h3>
+            <p class="difficulty">Beginner</p>
+            <p>Calculate student grades from test scores and display letter grades.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">✍️</div>
+            <h3>Text Analyzer</h3>
+            <p class="difficulty">Intermediate</p>
+            <p>Analyze text files and provide statistics like word count and frequency.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">📚</div>
+            <h3>Contact Book</h3>
+            <p class="difficulty">Intermediate</p>
+            <p>Create an app to store and manage contact information.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">📚</div>
+            <h3>Library System</h3>
+            <p class="difficulty">Intermediate</p>
+            <p>Build a system to manage book loans and returns using OOP.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">💰</div>
+            <h3>Budget Tracker</h3>
+            <p class="difficulty">Intermediate</p>
+            <p>Track expenses and income with data visualization.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>Web Scraper</h3>
+            <p class="difficulty">Advanced</p>
+            <p>Extract data from websites and store it in a database.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">🤖</div>
+            <h3>Chatbot</h3>
+            <p class="difficulty">Advanced</p>
+            <p>Create a simple chatbot that can understand user input.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">🎨</div>
+            <h3>Image Processor</h3>
+            <p class="difficulty">Advanced</p>
+            <p>Apply filters and transformations to images.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">📈</div>
+            <h3>Data Visualizer</h3>
+            <p class="difficulty">Advanced</p>
+            <p>Create charts and graphs from data using libraries like Matplotlib.</p>
+            <a href="#" class="btn btn-small">View Project</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .projects-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-header h1 {
+        color: var(--primary-color);
+    }
+    
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .project-card {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: var(--spacing-lg);
+        text-align: center;
+        transition: var(--transition);
+    }
+    
+    .project-card:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--box-shadow);
+        transform: translateY(-5px);
+    }
+    
+    .project-icon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .difficulty {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .difficulty {
+        background-color: #e7f3ff;
+        color: var(--primary-color);
+    }
+    
+    .project-card p:last-of-type {
+        margin-bottom: var(--spacing-lg);
+        color: #666;
+    }
+    
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    }
+</style>
+{% endblock %}

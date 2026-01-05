@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+
+{% block title %}Roadmap - PyPy{% endblock %}
+
+{% block content %}
+<section class="roadmap-section">
+    <div class="roadmap-header">
+        <h1>Your Learning Path</h1>
+        <p>Follow this structured roadmap to learn Python systematically</p>
+    </div>
+    
+    <div class="roadmap-container">
+        <div class="phase phase-1">
+            <div class="phase-header">
+                <h2>Phase 1: Foundations</h2>
+                <p class="duration">Weeks 1-4</p>
+            </div>
+            <div class="phase-content">
+                <p class="phase-goal">✓ Can write simple programs</p>
+                <div class="modules">
+                    <div class="roadmap-module">
+                        <span class="module-number">1</span>
+                        <span class="module-name">Introduction to Python</span>
+                    </div>
+                    <div class="roadmap-module">
+                        <span class="module-number">2</span>
+                        <span class="module-name">Python Fundamentals</span>
+                    </div>
+                    <div class="roadmap-module">
+                        <span class="module-number">3</span>
+                        <span class="module-name">Control Flow & Loops</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="phase phase-2">
+            <div class="phase-header">
+                <h2>Phase 2: Text & Functions</h2>
+                <p class="duration">Weeks 5-8</p>
+            </div>
+            <div class="phase-content">
+                <p class="phase-goal">✓ Can write reusable code</p>
+                <div class="modules">
+                    <div class="roadmap-module">
+                        <span class="module-number">4</span>
+                        <span class="module-name">Strings in Python</span>
+                    </div>
+                    <div class="roadmap-module">
+                        <span class="module-number">5</span>
+                        <span class="module-name">Functions & Modules</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="phase phase-3">
+            <div class="phase-header">
+                <h2>Phase 3: Data & OOP</h2>
+                <p class="duration">Weeks 9-16</p>
+            </div>
+            <div class="phase-content">
+                <p class="phase-goal">✓ Can build applications</p>
+                <div class="modules">
+                    <div class="roadmap-module">
+                        <span class="module-number">6</span>
+                        <span class="module-name">Data Structures</span>
+                    </div>
+                    <div class="roadmap-module">
+                        <span class="module-number">7</span>
+                        <span class="module-name">Object-Oriented Programming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="phase phase-4">
+            <div class="phase-header">
+                <h2>Phase 4: Advanced & Real-World</h2>
+                <p class="duration">Weeks 17-20</p>
+            </div>
+            <div class="phase-content">
+                <p class="phase-goal">✓ Can use libraries & APIs</p>
+                <div class="modules">
+                    <div class="roadmap-module">
+                        <span class="module-number">8</span>
+                        <span class="module-name">Advanced Concepts</span>
+                    </div>
+                    <div class="roadmap-module">
+                        <span class="module-number">9</span>
+                        <span class="module-name">File Handling & OS</span>
+                    </div>
+                    <div class="roadmap-module">
+                        <span class="module-number">10</span>
+                        <span class="module-name">External Libraries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="roadmap-tips">
+        <h2>Tips for Success</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-icon">📅</div>
+                <h3>Follow the Schedule</h3>
+                <p>Stick to the 16-20 week timeline. Consistency is more important than speed.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">💪</div>
+                <h3>Practice Every Day</h3>
+                <p>Spend 30-60 minutes daily on coding. Regular practice builds muscle memory.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🧩</div>
+                <h3>Complete All Exercises</h3>
+                <p>Don't just read - write code! The 100+ exercises are essential.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🎯</div>
+                <h3>Take the Quizzes</h3>
+                <p>Quiz yourself after each module. Aim for 70%+ to move to the next module.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🚀</div>
+                <h3>Build Projects</h3>
+                <p>Apply your knowledge to real projects. This is where true learning happens.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🆘</div>
+                <h3>Ask for Help</h3>
+                <p>When stuck, don't give up. Check resources or ask online communities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .roadmap-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .roadmap-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .roadmap-header h1 {
+        color: var(--primary-color);
+    }
+    
+    .roadmap-container {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .phase {
+        background: white;
+        border-radius: 12px;
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        border-left: 5px solid var(--primary-color);
+    }
+    
+    .phase-header h2 {
+        color: var(--primary-color);
+        margin-bottom: 0;
+    }
+    
+    .duration {
+        color: #666;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+    
+    .phase-content {
+        margin-top: var(--spacing-md);
+    }
+    
+    .phase-goal {
+        font-weight: 600;
+        color: var(--success-color);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .modules {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .roadmap-module {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+        color: white;
+        padding: var(--spacing-md);
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .module-number {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+    
+    .module-name {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .roadmap-tips {
+        background: #f9f9f9;
+        padding: var(--spacing-xl);
+        border-radius: 12px;
+    }
+    
+    .roadmap-tips h2 {
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .tip-card {
+        background: white;
+        padding: var(--spacing-lg);
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .tip-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tip-card h3 {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+    }
+    
+    .tip-card p {
+        color: #666;
+        font-size: 0.95rem;
+    }
+    
+    @media (max-width: 768px) {
+        .modules {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
