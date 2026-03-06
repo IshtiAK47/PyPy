@@ -189,6 +189,19 @@ Use advanced features and external libraries
 | `/about` | About the platform |
 
 ---
+## 📸 Sample Screenshots
+
+| | |
+|---|---|
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/1.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/2.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/3.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/4.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/5.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/6.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/7.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/8.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/9.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/10.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/11.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/12.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/13.png) | ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/14.png) |
+| ![](https://raw.githubusercontent.com/IshtiAK47/PyPy/refs/heads/main/screenshots/15.png) | |
+
 
 ## 🎯 Key Features
 
